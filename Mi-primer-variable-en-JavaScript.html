@@ -1,5 +1,8 @@
 <script>
 
+
+
+//declaramos la variable con la palabra reservada var
 var nombre = "Brandon Axell Ruiz";
 
 //variable impresa con el valor de Brandon Axell Ruiz
@@ -11,6 +14,7 @@ nombre = "Monica";
 //variable impresa con el valor de Monica
 console.log("Este es el nuevo valor de nombre: "+nombre);
 
+//declaramos un variable tipo constante y esas varibales al ser definidas ya no pueden ser modificadas 
 const animal = "Gato";
 console.log("Este es el valor asignado a animal: "+animal);
 
@@ -30,14 +34,19 @@ console.log("Este es el nuevo valor asignado a animal "+animal);
 // esta alert nos dira Bienvenido y el valor de nombre ya que se concateno con el simbolo de "+".
 alert("Bienvenido "+nombre);
 
+//if para saber si existen las variables o estan definidas
 if(nombre && email){
     alert(nombre, email)
 }
 
-if(nombre == "juan" || nombre == "juan"){
+
+//if de comparacion para el nombre y si entra te da la bienvenida
+if(nombre == "juan" || nombre == "rodrigo"){
     console.log("bienvenido:", nombre)
 }
 
+
+//swtic que muestra dependindo el valor de la variable de nombre tu sexo
 switch(nombre){
 
     case 'monica' :
@@ -58,13 +67,30 @@ switch(nombre){
 
 }
 
+
+//creamos el array 
 let arregloMachin = [nombre, animal, email];
 
+//imprime en consola el array 
 console.log(arregloMachin)
 
+
+//creamos el objeto en javascript
 let objMachin = {
    'nombre' : nombre,
    'animal' : animal,
    'email' : email
+}
+
+
+// descompone el array en un ciclo foreach para ver su contenido  
+arregloMachin.forEach(element => {
+    console.log(element)
+});
+
+
+// descompone el array en un ciclo for para ver su contenido  
+for(i in objMachin){
+    console.log(objMachin[i])
 }
 </script>
