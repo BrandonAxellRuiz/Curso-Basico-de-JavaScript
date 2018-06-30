@@ -1,0 +1,49 @@
+
+<html>
+    <head>
+        <title>Mi primer Objeto JSON</title>
+    </head>
+    <body>
+        <!-- es el div donde se imprimira el objeto -->
+        <div id="miTabla">
+
+        </div>
+        <script>
+            //"declaro un variable constante para imprimir en consola y una que hace referecia al documento de la pagina
+            const c = console.log, d = document
+
+            //"let" es como se declaran variables igual que "var" pero se usan para delimitar el alcanse de la variable
+            let myObjet = {}
+
+            //instancio la variable de myObjet para darle como valor mi objeto
+            myObjet = {
+                'name':'Brandon Axell Ruiz',
+                'email': {
+                    principalEmail: 'brandon_axell@hotmail.com',
+                    secundaryEmail: 'blackbrandonanswer@gmail.com'
+                },
+                'phone': {
+                    firstPhone: 8781011009,
+                    secondPhone: 7815852
+                },
+                'direcction': 'mi casa de mexico 258'
+            }
+            //imprimo en la consola el objeto para visualizarlo preciona en tu teclado CTRL+SHIFT+I
+            c(myObjet)
+
+            //Descomponemos el objeto con un ciclo for
+            for (i in myObjet){
+        
+            //lo imprimo con un alert cada valor de un objeto
+                alert(myObjet[i])
+            //lo imprimo con un console.log cada valor de un objeto
+                c(myObjet[i])
+            
+            //lo imprimo con un div cada valor de un objeto
+                d.getElementById('miTabla').innerHTML +=  `<td>${myObjet[i]}</td>`
+                
+            }   
+               
+        </script>
+    </body>
+</html>
