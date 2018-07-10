@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>Funciones anonimas ES6</title>
+    </head>
+    <body>
+        <script>
+            /*
+                este tipo de funciones se les denomina anonimas 
+                ya que no tiene un nombre de funcion como por ejemple 
+                las definidas serian 
+                    function miFuncion(miParametroA, miParametroB){
+                        return `${miParametroA} ${miParametroB}`
+                    }
+                    console.log(miFuncion(1, "hola"))
+            */
+
+/* ==================================================================================================================== */
+
+            //Funcion anonima con fat arrow
+                let xl = function(a){
+                           return a
+                        }
+                console.log(xl(`Soy la version vieja de envio de un solo parametro`)) 
+            
+            //Funcion anonima con fat arrow
+                let xn = a => a
+                console.log(xn(`Soy una fat arrow function en ES6 de un solo parametro`)) 
+
+/* ==================================================================================================================== */
+
+            //vieja version Funcion anonima de varios parametros 
+                let yl = function(a, b){
+                            return a + b
+                        }
+                console.log(yl(2,2))
+            //nueva version Funcion anonima ES6 fat arrow de varios parametros 
+                let yn = (a, b) => a + b
+                console.log(yn(1,2))
+
+
+/* ==================================================================================================================== */
+
+            //vieja version timer
+                setTimeout(function(){
+                    alert("Soy la vieja version de funciones en un setTimeout")
+                }, 200)
+            //neuva version timer con arrow function
+                setTimeout(() => alert("Hola desde un setTimeout con arrow function"), 300)
+            
+/* ==================================================================================================================== */
+
+            //vieja version function anonima con retorno de variables internas
+                let zl = function(){
+                            a = "hola mundo soy la variable A"
+                            alert("Funcion anonima sin parametros y con variables " + a)
+                        }
+                zl()
+
+            //nueva version arrow function anonima con retorno de variables internas 
+                let zn = () => { mensaje = `Hola esta es una funcion anonima`; instructor = `Bradon Axell Ruiz`; alert(`${mensaje +" creada por "+ instructor}`)}
+                zn()
+
+        </script>
+    </body>
+</html>
