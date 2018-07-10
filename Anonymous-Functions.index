@@ -16,13 +16,13 @@
 
 /* ==================================================================================================================== */
 
-            //Funcion anonima con fat arrow
+            //vieja version Funcion anonima 
                 let xl = function(a){
                            return a
                         }
                 console.log(xl(`Soy la version vieja de envio de un solo parametro`)) 
             
-            //Funcion anonima con fat arrow
+            //nueva version Funcion anonima con fat arrow
                 let xn = a => a
                 console.log(xn(`Soy una fat arrow function en ES6 de un solo parametro`)) 
 
