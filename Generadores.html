@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Generadores ES6</title>
+    </head>
+    <body>
+        <script>
+
+            /* 
+                para crear una funcion de tipo generador es primordial que se le agrege
+                el * despues de la funcion, este tipo de funciones sirve para guardar el 
+                estado de la de la funcion, se ocupa la palabra yield para returnar el valor
+                y guardar el valor en memoria.
+            */
+            let rango =  function * (inicio, fin, incremento){
+                for(inicio; inicio < fin; inicio += incremento){
+                    yield inicio
+                }
+            }
+
+            
+            for(let i of rango(0, 10, 2)){
+                //nos returnara el estado de yield antes del incremento en este caso del 0 al 8
+                console.log(i)
+            }
+            
+            
+            /*
+                el objeto next sirve para obtener el valor de la funcion que esta almacenado
+                yield en el estado de yield de lo contrario al querer instanciar la funcion directa
+                de esta forma "console.log( rango(0, 10, 2))"
+                nos regresara un objeto con estado de "suspended" 
+            */
+            //console.log(rango().next().value) //metodo correcto
+            
+        </script>
+    </body>
+
+</html>
