@@ -9,7 +9,8 @@
                 para crear una funcion de tipo generador es primordial que se le agrege
                 el * despues de la funcion, este tipo de funciones sirve para guardar el 
                 estado de la de la funcion, se ocupa la palabra yield para returnar el valor
-                y guardar el valor en memoria.
+                y guardar el valor en memoria y en algun caso que desemos dejar un valor en 
+                la funcion y volver a retomarlo para alguna modificacion o solo tenerlo.
             */
             let rango =  function * (inicio, fin, incremento){
                 for(inicio; inicio < fin; inicio += incremento){
@@ -17,12 +18,12 @@
                 }
             }
 
-            
+        
             for(let i of rango(0, 10, 2)){
                 //nos returnara el estado de yield antes del incremento en este caso del 0 al 8
                 console.log(i)
             }
-            
+
             
             /*
                 el objeto next sirve para obtener el valor de la funcion que esta almacenado
